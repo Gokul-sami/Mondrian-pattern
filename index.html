@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+    .container{
+      width: 748px;
+      height: 74px;
+      display: grid;
+      gap: 9px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+    .red{
+      width: 320px;
+      height: 414px;
+      background-color: #e72f24;
+    }
+    .white{
+      background-color: #f0f1ec;
+    }
+    .w1{
+      width: 419px;
+      height: 414px;
+      grid-column: span 3;
+    }
+    .w2{
+      width: 320px;
+      height: 295px;
+    }
+    .w3{
+      width: 360px;
+      height: 295px;
+      grid-column: span 2;
+      grid-column-start: 2;
+    }
+    .flexg{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      /*width: 50px;
+      height: 324px;*/
+      grid-row: span 2;
+      grid-area: 2/3/4/5;
+    }
+    .nightblue{
+      background-color: #004592;
+      width: 50px;
+      height: 130px;
+    }
+    .w5{
+      width: 50px;
+      height: 184px;
+    }
+    .w4{
+      width: 320px;
+      height: 20px;
+      grid-column-start: 1;
+      grid-row-start: 3;
+    }
+    .yellow{
+      background-color: #f8d11f;
+      width: 198px;
+      height: 20px;
+    }
+    .black{
+      background-color: #232629;
+      height: 20px;
+      width: 150px;
+    }
+    .yb{
+      display: flex;
+      gap: 9px;
+      grid-area: 3/2/4/4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="red"></div>
+    <div class="white w1"></div>
+    <div class="white w2"></div>
+    <div class="white w3"></div>
+    <div class="flexg">
+      <div class="nightblue"></div>
+      <div class="white w5"></div>
+    </div>
+    <div class="white w4"></div>
+    <div class="yb">
+      <div class="yellow"></div>
+      <div class="black"></div>
+    </div>
+  </div>
+</body>
+
+</html>
